@@ -1,0 +1,18 @@
+query Input {
+  cart {
+    lines {
+      quantity
+      merchandise {
+        __typename
+        ...on ProductVariant {
+            id
+        }
+      }
+    }
+    buyerIdentity {
+      customer {
+        hasAnyTag(tags: ["VIP"])
+      }
+    }
+  }
+}
