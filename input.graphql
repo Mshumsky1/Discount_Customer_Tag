@@ -1,17 +1,17 @@
 query Input {
   cart {
+    buyerIdentity {
+      customer {
+        hasAnyTag(tags: ["VIP"])
+      }
+    }
     lines {
       quantity
       merchandise {
         __typename
-        ...on ProductVariant {
-            id
+        ... on ProductVariant {
+          id
         }
-      }
-    }
-    buyerIdentity {
-      customer {
-        hasAnyTag(tags: ["VIP"])
       }
     }
   }
