@@ -53,7 +53,7 @@ export default (input) => {
         targets,
         value: {
           percentage: {
-            value: "50.0",
+            value: "10.0",
           },
         },
       },
